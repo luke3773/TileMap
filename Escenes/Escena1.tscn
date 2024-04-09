@@ -1,22 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://jrwigbo4rkd5"]
+[gd_scene load_steps=4 format=3 uid="uid://jrwigbo4rkd5"]
 
 [ext_resource type="PackedScene" uid="uid://l8ooorptjmm5" path="res://Escenes/TileMap.tscn" id="1_tjkqt"]
-
-[sub_resource type="Gradient" id="Gradient_y4rnn"]
-offsets = PackedFloat32Array(0, 0.11039, 0.207792, 0.279221, 0.422078, 0.571429, 1)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_fgvi7"]
-gradient = SubResource("Gradient_y4rnn")
-width = 256
-height = 256
-use_hdr = true
-fill = 1
-fill_from = Vector2(1, 0)
-fill_to = Vector2(0, 1)
+[ext_resource type="PackedScene" uid="uid://cg8tvigy2c4pd" path="res://Escenes/Personatge.tscn" id="2_hjqnx"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_oksjn"]
-polygon = PackedVector2Array(321, 519, 321, 515, 315, 515, 315, 519)
+polygon = PackedVector2Array(337, 522, 337, 519, 309, 519, 309, 522)
 
 [node name="Node2D" type="Node2D"]
 
@@ -24,18 +12,23 @@ polygon = PackedVector2Array(321, 519, 321, 515, 315, 515, 315, 519)
 layer_0/name = "Terra"
 layer_0/tile_data = PackedInt32Array(2228225, 131072, 1, 2228224, 65536, 1, 2228226, 131072, 1, 2228228, 131072, 6, 2228230, 131072, 6, 2228229, 131072, 6, 2228227, 131072, 1, 2162692, 131072, 1, 2162693, 131072, 1, 2097158, 131072, 1, 2097159, 131072, 1, 2097160, 131072, 1, 2162697, 131072, 1, 2162698, 131072, 1, 2162699, 131072, 1, 2162694, 131072, 6, 2162695, 131072, 6, 2162696, 131072, 6, 2228232, 131072, 6, 2228231, 131072, 6, 2228235, 131072, 6, 2228234, 131072, 6, 2228233, 131072, 6, 2228236, 131072, 1, 2228237, 131072, 1, 2228238, 131072, 1, 2228239, 327680, 0, 2162703, 327680, 0, 2097167, 327680, 0, 2228240, 131072, 6, 2162704, 131072, 6, 2031631, 327680, 0, 1966095, 327680, 0, 1900559, 327680, 0, 1835023, 327680, 0, 1900560, 131072, 6, 1966096, 131072, 6, 2031632, 131072, 6, 2097168, 131072, 6, 2031634, 131072, 6, 2097170, 131072, 6, 2162706, 131072, 6, 1900562, 131072, 6, 1966098, 131072, 6, 1966099, 131072, 6, 2031635, 131072, 6, 2097171, 131072, 6, 2162707, 131072, 6, 1900563, 131072, 5, 2293779, 131072, 6, 2293776, 131072, 6, 2293775, 327680, 0, 2293774, 131072, 6, 2293773, 131072, 6, 2293772, 131072, 6, 2293771, 131072, 6, 2293770, 131072, 6, 2293769, 131072, 6, 2293768, 131072, 6, 2293767, 131072, 6, 2293766, 131072, 6, 2293765, 131072, 6, 2293764, 131072, 6, 2293763, 131072, 6, 2293762, 131072, 6, 2293761, 131072, 6, 2293760, 65536, 6, 2162705, 131072, 6, 2293777, 131072, 6, 2293778, 131072, 6, 1900561, 131072, 6, 1966097, 131072, 6, 2031633, 131072, 6, 2097169, 131072, 6, 2228241, 131072, 6, 2228242, 131072, 6, 2228243, 131072, 6, 1835024, 131072, 5, 1835025, 131072, 5, 1835026, 131072, 5)
 layer_1/name = "Escales"
-layer_1/tile_data = PackedInt32Array(1769487, 720896, 2, 1835023, 720896, 3, 1900559, 720896, 3, 1966095, 720896, 3, 2031631, 720896, 3, 2097167, 720896, 3, 2162703, 720896, 3, 2228239, 720896, 3, 1769489, 524288, 4, 1769477, 1048576, 1, 1835013, 1048576, 2, 1900549, 1048576, 3, 1966085, 1048576, 4, 2031621, 1048576, 5, 2097157, 1048576, 6)
+layer_1/tile_data = PackedInt32Array(1769487, 720896, 2, 1835023, 720896, 3, 1900559, 720896, 3, 1966095, 720896, 3, 2031631, 720896, 3, 2097167, 720896, 3, 2162703, 720896, 3, 2228239, 720896, 3, 1769489, 524288, 4)
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="Sol" type="DirectionalLight2D" parent="."]
 position = Vector2(576, 325)
 scale = Vector2(4.5, 2.53125)
+color = Color(0.929412, 0.929412, 0.929412, 1)
+energy = 1.43
+blend_mode = 2
 shadow_enabled = true
-texture = SubResource("GradientTexture2D_fgvi7")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(2, 2)
 color = Color(0.478431, 0.478431, 0.478431, 1)
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-position = Vector2(-4, -11)
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_hjqnx")]
+position = Vector2(23, 585)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="CharacterBody2D"]
+position = Vector2(-323, -495)
 occluder = SubResource("OccluderPolygon2D_oksjn")
